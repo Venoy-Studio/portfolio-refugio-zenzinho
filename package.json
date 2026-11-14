@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-refugio-zenzinho",
+  "version": "1.0.0",
+  "description": "💙 Refúgio Zenzinho — Hospedagem acolhedora, Spa, Livraria, Cafeteria e Day Use em meio à natureza em Maricá-RJ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'Static site ready for Cloudflare Pages'"
+  },
+  "keywords": [
+    "portfolio",
+    "landing-page",
+    "venoy-studio",
+    "refugio-zenzinho",
+    "marica",
+    "itaipuacu",
+    "pousada",
+    "spa",
+    "day-use",
+    "cafeteria"
+  ],
+  "author": "Venoy Studio",
+  "license": "MIT",
+  "private": true
+}
