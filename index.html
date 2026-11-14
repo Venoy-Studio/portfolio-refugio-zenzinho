@@ -21,34 +21,34 @@
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/logo.png">
 
-  <!-- Tipografia Editorial & Autoral -->
+  <!-- Tipografia Editorial & Autoral Mais Leve e Sofisticada -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* DESIGN SYSTEM: REFÚGIO ZENZINHO • ANTI-AI SLOP & MOBILE NATIVE */
+    /* DESIGN SYSTEM: REFÚGIO ZENZINHO • LUXO ACOLHEDOR & FONTES LEVES */
     :root {
-      --c-forest: #1A382A;
-      --c-forest-light: #2A5441;
-      --c-moss: #3E6B52;
+      --c-forest: #142E22;
+      --c-forest-light: #234D3A;
+      --c-moss: #3E6551;
       --c-blue-zen: #23426B;
       --c-terracotta: #A8482A;
       --c-terracotta-soft: #F7ECE8;
       --c-amber: #C98818;
       
-      --bg-cream: #FAF7F0;
+      --bg-cream: #FAF8F2;
       --bg-card: #FFFFFF;
-      --bg-warm: #F2ECE0;
+      --bg-warm: #F4EFE6;
       
-      --txt-title: #14211A;
+      --txt-title: #101E17;
       --txt-body: #32473D;
       --txt-muted: #5E756A;
       
-      --border-line: rgba(26, 56, 42, 0.12);
-      --border-card: rgba(26, 56, 42, 0.08);
+      --border-line: rgba(20, 46, 34, 0.1);
+      --border-card: rgba(20, 46, 34, 0.07);
 
-      --font-display: 'Fraunces', Georgia, serif;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
       --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     }
 
@@ -65,9 +65,10 @@
 
     body {
       font-family: var(--font-body);
+      font-weight: 300;
       background-color: var(--bg-cream);
       color: var(--txt-body);
-      line-height: 1.6;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
       padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -76,9 +77,44 @@
     h1, h2, h3, h4 {
       font-family: var(--font-display);
       color: var(--txt-title);
-      font-weight: 600;
+      letter-spacing: -0.01em;
       line-height: 1.2;
-      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: clamp(2.3rem, 4.6vw, 3.6rem);
+      line-height: 1.15;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 1.55rem;
+      line-height: 1.25;
+    }
+
+    h4 {
+      font-weight: 500;
+      font-size: 1.3rem;
+    }
+
+    em {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    p, .hero-text, .room-desc, .space-info p {
+      font-family: var(--font-body);
+      font-weight: 300;
+      color: var(--txt-body);
+      line-height: 1.7;
     }
 
     .container {
@@ -89,11 +125,11 @@
       padding-right: 20px;
     }
 
-    /* Sobretítulo limpo sem emojis clichês */
+    /* Sobretítulo limpo e sofisticado com tracking */
     .eyebrow {
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--c-moss);
       margin-bottom: 12px;
@@ -107,8 +143,9 @@
       justify-content: center;
       gap: 8px;
       font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      font-size: 0.94rem;
       padding: 13px 24px;
       border-radius: 999px;
       text-decoration: none;
@@ -189,18 +226,19 @@
 
     .brand-title {
       font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 700;
+      font-size: 1.35rem;
+      font-weight: 500;
       color: var(--c-forest);
       line-height: 1.1;
+      letter-spacing: 0.01em;
     }
 
     .brand-sub {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--c-terracotta);
-      font-weight: 600;
+      font-weight: 500;
       display: block;
     }
 
@@ -263,7 +301,8 @@
 
     .stat-pill strong {
       font-family: var(--font-display);
-      font-size: 1.45rem;
+      font-size: 1.6rem;
+      font-weight: 400;
       color: var(--c-forest);
       line-height: 1.1;
     }
@@ -618,18 +657,18 @@
 
     .library-badge-number {
       font-family: var(--font-display);
-      font-size: 3rem;
+      font-size: 3.6rem;
       line-height: 1;
       color: var(--c-terracotta);
-      font-weight: 700;
-      margin-bottom: 6px;
+      font-weight: 300;
+      margin-bottom: 4px;
     }
 
     .library-badge-sub {
-      font-size: 0.86rem;
+      font-size: 0.76rem;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 700;
+      letter-spacing: 0.14em;
+      font-weight: 600;
       color: var(--c-forest);
       margin-bottom: 16px;
       display: block;
@@ -689,7 +728,8 @@
     }
 
     .room-title {
-      font-size: 1.45rem;
+      font-size: 1.55rem;
+      font-weight: 400;
       color: var(--c-forest);
       margin-bottom: 8px;
     }
@@ -821,10 +861,11 @@
 
     .review-text {
       font-family: var(--font-display);
-      font-size: 1.25rem;
+      font-size: 1.45rem;
       font-style: italic;
+      font-weight: 300;
       color: var(--txt-title);
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 16px;
     }
 
@@ -1084,7 +1125,7 @@
         <div class="hero-grid">
           <div>
             <span class="eyebrow">Itaocaia Valley • Maricá, RJ</span>
-            <h1>Aconchego em meio à natureza para desacelerar e respirar fundo.</h1>
+            <h1>Aconchego em meio à natureza para <em>desacelerar</em> e respirar fundo.</h1>
             <p class="hero-text">
               Pousada familiar aos pés da Serra da Tiririca. Piscina ao ar livre com solarium, acervo cultural com mais de 2.000 livros, sessões de massoterapia e café da manhã colonial com produtos da região.
             </p>
@@ -1223,9 +1264,9 @@
           </div>
 
           <!-- 4. Café Decolonial -->
-          <div class="hl-circle-item" onclick="openStoryModal('Café Decolonial', 'assets/images/cafe-real.jpg', 'Banquete de café da manhã e da tarde com pães artesanais, bolos caseiros, queijos e frutas colhidas por pequenos produtores de Maricá.')">
+          <div class="hl-circle-item" onclick="openStoryModal('Café Decolonial', 'assets/images/cafe-decolonial.jpg', 'Banquete de café da manhã colonial com pães artesanais de fermentação lenta, bolos frescos, queijos da região e café especial coado na hora.')">
             <div class="hl-avatar-frame">
-              <img src="assets/images/cafe-real.jpg" alt="Destaque Café Decolonial" class="hl-photo">
+              <img src="assets/images/cafe-decolonial.jpg" alt="Destaque Café Decolonial" class="hl-photo">
             </div>
             <span class="hl-name">Café Decolonial</span>
           </div>
@@ -1312,7 +1353,7 @@
 
           <!-- Reel 2 -->
           <div class="reel-box" id="r2">
-            <video class="reel-vid" poster="assets/images/cafe-real.jpg" loop muted playsinline preload="metadata">
+            <video class="reel-vid" poster="assets/images/cafe-decolonial.jpg" loop muted playsinline preload="metadata">
               <source src="assets/videos/sample-loop.mp4" type="video/mp4">
             </video>
             <div class="reel-dark-gradient"></div>
@@ -1476,7 +1517,7 @@
         <!-- Café Decolonial -->
         <div class="space-row reverse" id="cafe">
           <div>
-            <img src="assets/images/cafe-real.jpg" alt="Espaço real de café e convivência no Refúgio Zenzinho" class="space-img">
+            <img src="assets/images/cafe-decolonial.jpg" alt="Banquete do Café Decolonial com pães artesanais, frutas frescas e café especial no Refúgio Zenzinho" class="space-img">
           </div>
           <div class="space-info">
             <span class="eyebrow">Alimentação Afetiva</span>
