@@ -883,10 +883,10 @@
       color: var(--txt-muted);
     }
 
-    /* FOOTER */
+    /* FOOTER COM ALTO CONTRASTE E LEGIBILIDADE */
     .site-footer {
-      background: #14211A;
-      color: #E2ECE6;
+      background: #0E1B15;
+      color: #E2EDE7;
       padding: 60px 0 32px 0;
       border-top: 3px solid var(--c-terracotta);
     }
@@ -900,15 +900,19 @@
 
     .footer-brand h4 {
       color: #FFFFFF;
-      font-size: 1.4rem;
-      margin-bottom: 10px;
+      font-size: 1.45rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      margin-bottom: 12px;
     }
 
     .footer-brand p {
-      font-size: 0.88rem;
-      opacity: 0.8;
-      line-height: 1.6;
-      max-width: 280px;
+      color: #D2E4DA !important;
+      font-size: 0.92rem;
+      opacity: 1 !important;
+      line-height: 1.65;
+      max-width: 300px;
+      font-weight: 300;
     }
 
     .footer-col h5 {
@@ -916,37 +920,50 @@
       font-size: 0.96rem;
       font-family: var(--font-body);
       font-weight: 600;
+      letter-spacing: 0.04em;
       margin-bottom: 14px;
+    }
+
+    .footer-col p {
+      color: #D2E4DA !important;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      opacity: 1 !important;
+      margin-bottom: 12px;
     }
 
     .footer-links {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
     }
 
     .footer-links a {
-      color: #D1E0D7;
+      color: #D2E4DA !important;
       text-decoration: none;
-      font-size: 0.86rem;
-      opacity: 0.75;
-      transition: opacity 0.2s ease;
+      font-size: 0.88rem;
+      opacity: 0.9;
+      transition: all 0.2s ease;
+      font-weight: 300;
     }
     .footer-links a:hover {
       opacity: 1;
-      color: #FFFFFF;
+      color: #FFFFFF !important;
+      padding-left: 2px;
     }
 
     .footer-sub {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
       padding-top: 24px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
-      font-size: 0.82rem;
-      opacity: 0.7;
+      font-size: 0.84rem;
+      color: #C0D6CB !important;
+      opacity: 1 !important;
+      font-weight: 300;
     }
 
     /* BOTÃO FLUTUANTE DE WHATSAPP (CRO MOBILE OTIMIZADO) */
