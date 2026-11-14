@@ -187,16 +187,18 @@
       border-color: var(--c-forest);
     }
 
-    /* HEADER / NAVBAR */
+    /* HEADER / NAVBAR TRANSLÚCIDA */
     .site-header {
-      position: sticky;
+      position: absolute;
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 60;
-      background: rgba(250, 247, 240, 0.94);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-line);
-      height: 72px;
+      background: rgba(10, 22, 16, 0.4);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      height: 74px;
       display: flex;
       align-items: center;
     }
@@ -221,23 +223,23 @@
       height: 44px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--c-forest);
+      border: 2px solid rgba(255, 255, 255, 0.85);
     }
 
     .brand-title {
       font-family: var(--font-display);
       font-size: 1.35rem;
-      font-weight: 500;
-      color: var(--c-forest);
+      font-weight: 400;
+      color: #FFFFFF;
       line-height: 1.1;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.02em;
     }
 
     .brand-sub {
       font-size: 0.7rem;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--c-terracotta);
+      color: #E6BC65;
       font-weight: 500;
       display: block;
     }
@@ -250,118 +252,116 @@
     }
 
     .nav-item a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--txt-muted);
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
       text-decoration: none;
+      letter-spacing: 0.02em;
       transition: color 0.2s ease;
     }
     .nav-item a:hover {
-      color: var(--c-forest);
+      color: #FFFFFF;
     }
 
-    /* HERO SECTION */
-    .hero {
-      padding: 36px 0 60px 0;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.1rem, 4.2vw, 3.4rem);
-      margin-bottom: 18px;
-      color: var(--c-forest);
-    }
-
-    .hero-text {
-      font-size: 1.08rem;
-      color: var(--txt-body);
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
-
-    .hero-stats-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-bottom: 30px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border-line);
-    }
-
-    .stat-pill {
+    /* FULLSCREEN CINEMATIC HERO COM A FOTO REAL DE FUNDO */
+    .hero-fullscreen {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(180deg, rgba(8, 18, 13, 0.55) 0%, rgba(8, 18, 13, 0.35) 45%, rgba(8, 18, 13, 0.88) 100%), url('assets/images/hero-real.jpg') center center / cover no-repeat;
+      background-attachment: fixed;
+      padding-top: 130px;
+      padding-bottom: 40px;
     }
 
-    .stat-pill strong {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      font-weight: 400;
-      color: var(--c-forest);
-      line-height: 1.1;
+    .hero-center-box {
+      text-align: center;
+      max-width: 980px;
+      margin: auto;
+      padding: 20px;
+      color: #FFFFFF;
     }
 
-    .stat-pill span {
-      font-size: 0.78rem;
-      color: var(--txt-muted);
+    .hero-eyebrow {
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      color: #E6BC65;
+      margin-bottom: 16px;
+      display: inline-block;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
     }
 
-    .hero-cta-group {
+    .hero-grand-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 6.2vw, 5.2rem);
+      font-weight: 300;
+      line-height: 1.08;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+      margin-bottom: 22px;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.5);
+    }
+
+    .hero-grand-title em {
+      font-style: italic;
+      color: #FAF5E8;
+    }
+
+    .hero-lead-text {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.92);
+      max-width: 740px;
+      margin: 0 auto 30px auto;
+      line-height: 1.65;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+    }
+
+    .hero-pills-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
     }
 
-    .hero-visual-card {
-      position: relative;
-    }
-
-    .hero-real-img {
-      width: 100%;
-      height: 480px;
-      border-radius: 20px;
-      object-fit: cover;
-      box-shadow: 0 16px 36px -10px rgba(20, 33, 26, 0.15);
-      border: 4px solid #FFFFFF;
-      display: block;
-    }
-
-    .hero-photo-tag {
-      position: absolute;
-      bottom: 16px;
-      left: 16px;
-      background: rgba(20, 33, 26, 0.85);
-      backdrop-filter: blur(8px);
-      color: #FFFFFF;
-      padding: 8px 16px;
+    .hero-glass-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 16px;
       border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 500;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      font-size: 0.82rem;
+      font-weight: 400;
+      border: 1px solid rgba(255, 255, 255, 0.25);
       letter-spacing: 0.02em;
     }
 
-    /* MOTOR DE RESERVAS (Mobile-First) */
-    .booking-wrapper {
-      margin-top: -24px;
-      margin-bottom: 64px;
-      position: relative;
-      z-index: 10;
+    /* MOTOR DE RESERVAS FLUTUANTE */
+    .hero-booking-container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+      z-index: 20;
     }
 
     .booking-box {
-      background: #FFFFFF;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(14px);
       border-radius: 20px;
       padding: 24px 28px;
-      box-shadow: 0 18px 40px -10px rgba(20, 33, 26, 0.1);
-      border: 1px solid var(--border-card);
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.9);
     }
 
     .booking-box-header {
@@ -374,14 +374,17 @@
     }
 
     .booking-box-header h2 {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
+      font-weight: 400;
       color: var(--c-forest);
+      margin: 0;
     }
 
     .booking-tagline {
       font-size: 0.82rem;
       color: var(--c-terracotta);
       font-weight: 600;
+      letter-spacing: 0.02em;
     }
 
     .booking-grid {
@@ -398,8 +401,8 @@
     }
 
     .field-label {
-      font-size: 0.76rem;
-      font-weight: 700;
+      font-size: 0.74rem;
+      font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--txt-muted);
@@ -410,12 +413,17 @@
       padding: 12px 14px;
       border-radius: 10px;
       border: 1px solid rgba(26, 56, 42, 0.18);
-      background: var(--bg-cream);
+      background: #FAF8F2;
       font-family: var(--font-body);
       font-size: 0.92rem;
       color: var(--txt-title);
       outline: none;
       min-height: 48px;
+    }
+
+    .field-input:focus {
+      border-color: var(--c-forest);
+      background: #FFFFFF;
     }
 
     .field-input:focus {
@@ -1022,12 +1030,27 @@
 
     /* ==================== AJUSTES RIGOROSOS PARA MOBILE ==================== */
     @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+      .hero-fullscreen {
+        background-attachment: scroll;
+        min-height: auto;
+        padding-top: 105px;
+        padding-bottom: 36px;
       }
-      .hero-real-img {
-        height: 360px;
+      .hero-grand-title {
+        font-size: 2.35rem;
+      }
+      .hero-lead-text {
+        font-size: 1.02rem;
+        margin-bottom: 22px;
+      }
+      .hero-booking-container {
+        padding: 0 10px;
+      }
+      .booking-grid {
+        grid-template-columns: 1fr;
+      }
+      .booking-box {
+        padding: 20px 16px;
       }
       .library-banner {
         grid-template-columns: 1fr;
@@ -1057,23 +1080,11 @@
       .nav-menu {
         display: none;
       }
-      .booking-grid {
-        grid-template-columns: 1fr;
+      .hero-fullscreen {
+        padding-top: 96px;
       }
-      .booking-box {
-        padding: 20px 18px;
-      }
-      .hero {
-        padding: 24px 0 44px 0;
-      }
-      .hero h1 {
+      .hero-grand-title {
         font-size: 2.15rem;
-      }
-      .hero-cta-group {
-        flex-direction: column;
-      }
-      .hero-cta-group .btn {
-        width: 100%;
       }
       .footer-grid {
         grid-template-columns: 1fr;
@@ -1119,50 +1130,29 @@
   </header>
 
   <main>
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <span class="eyebrow">Itaocaia Valley • Maricá, RJ</span>
-            <h1>Aconchego em meio à natureza para <em>desacelerar</em> e respirar fundo.</h1>
-            <p class="hero-text">
-              Pousada familiar aos pés da Serra da Tiririca. Piscina ao ar livre com solarium, acervo cultural com mais de 2.000 livros, sessões de massoterapia e café da manhã colonial com produtos da região.
-            </p>
+    <!-- ==================== HERO FULLSCREEN CINEMATOGRÁFICO ==================== -->
+    <section class="hero-fullscreen">
+      <div class="hero-center-box">
+        <span class="hero-eyebrow">Pousada Boutique & Spa • Itaocaia Valley, Maricá</span>
+        <h1 class="hero-grand-title">
+          Aconchego em meio à natureza para <em>desacelerar</em> e respirar fundo.
+        </h1>
+        <p class="hero-lead-text">
+          Pousada aos pés da Serra da Tiririca. Piscina ao ar livre com solarium, acervo cultural exclusivo com mais de 2.000 livros, sessões de massoterapia e café colonial com sabores da terra.
+        </p>
 
-            <div class="hero-stats-row">
-              <div class="stat-pill">
-                <strong>+2.000</strong>
-                <span>Livros no acervo</span>
-              </div>
-              <div class="stat-pill">
-                <strong>5.0 ★</strong>
-                <span>Avaliação no Google</span>
-              </div>
-              <div class="stat-pill">
-                <strong>10 min</strong>
-                <span>Da Praia de Itaipuaçu</span>
-              </div>
-            </div>
-
-            <div class="hero-cta-group">
-              <a href="#reservas" class="btn btn-forest">Consultar Disponibilidade</a>
-              <a href="https://api.whatsapp.com/send/?phone=5521984007434&text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20sobre%20Day%20Use%20ou%20Hospedagem%20no%20Ref%C3%BAgio%20Zenzinho!" target="_blank" rel="noopener" class="btn btn-outline">Falar com o Anfitrião</a>
-            </div>
-          </div>
-
-          <!-- Foto Real da Piscina e Espaço do Refúgio Zenzinho -->
-          <div class="hero-visual-card">
-            <img src="assets/images/hero-real.jpg" alt="Foto real da piscina e área verde do Refúgio Zenzinho em Maricá" class="hero-real-img">
-            <span class="hero-photo-tag">Foto real do espaço • Itaocaia Valley</span>
-          </div>
+        <div class="hero-pills-row">
+          <span class="hero-glass-pill">📚 +2.000 Livros no Acervo</span>
+          <span class="hero-glass-pill">🏊 Piscina com Solarium</span>
+          <span class="hero-glass-pill">☕ Café Decolonial</span>
+          <span class="hero-glass-pill">💆 Spa & Terapias</span>
+          <span class="hero-glass-pill">⭐ 5.0 no Google Maps</span>
+          <span class="hero-glass-pill">🐾 Pet Friendly</span>
         </div>
       </div>
-    </section>
 
-    <!-- ==================== MOTOR DE RESERVAS (Mobile-First) ==================== -->
-    <section class="booking-wrapper" id="reservas">
-      <div class="container">
+      <!-- MOTOR DE RESERVAS FLUTUANTE DE LUXO -->
+      <div class="hero-booking-container" id="reservas">
         <div class="booking-box">
           <div class="booking-box-header">
             <h2>Garanta sua estadia com a melhor tarifa</h2>
@@ -1225,7 +1215,7 @@
     </section>
 
     <!-- ==================== DESTAQUES REAIS DO INSTAGRAM ==================== -->
-    <section class="highlights-section" id="destaques">
+    <section class="highlights-section" id="destaques" style="padding-top: 54px;">
       <div class="container">
         <div class="highlights-title-row">
           <div>
